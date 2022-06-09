@@ -8,6 +8,4 @@ Prototype of Blender scene downloaded from [Sketchfab](https://sketchfab.com/3d-
 
 ![Danbo entity tree](https://github.com/mabelzhang/blender-robot-tips/blob/main/docs/images/danbo_entityTree.png)
 
-Sample video showing panning controls (via Key-mon) in Blender and surface normal display:
-
-https://github.com/mabelzhang/blender-robot-tips/blob/main/docs/images/blender_pan_normals_demo.mp4
+[Sample video](https://drive.google.com/file/d/1eWsLCntAQMpYuLdZ9kLiavMI4p-VfpWq/view?usp=sharing) showing panning controls (via Key-mon) in Blender and surface normal display.
