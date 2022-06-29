@@ -1,12 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="danbo_world">
-
-    <physics name="1ms" type="dart">
-      <max_step_size>0.02</max_step_size>
-      <real_time_factor>0</real_time_factor>
-    </physics>
-
     <plugin
       filename="ignition-gazebo-physics-system"
       name="ignition::gazebo::systems::Physics">
@@ -39,9 +33,39 @@
     </light>
 
     <include>
-      <pose>0 0 0 0 0 0</pose>
+      <!-- Shift world platform above z = 0 -->
+      <pose>0.8703 3.1635 6.19437 0 0 0</pose>
       <uri>danbo_scene</uri>
     </include>
+
+    <!-- Add static ground plane so everything doesn't fall to -infinity when
+         physics starts. -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 0</ambient>
+            <diffuse>0.8 0.8 0.8 0</diffuse>
+            <specular>0.8 0.8 0.8 0</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
 
   </world>
 </sdf>
